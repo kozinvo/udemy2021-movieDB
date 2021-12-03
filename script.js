@@ -64,13 +64,13 @@ const personalMovieDB = {
             //     i--;
             // }
 
-            let genres = prompt(`Введите ваши любимые жанры через запятую и пробел`);
+            let genres = prompt(`Введите ваши любимые жанры через запятую и пробел`).toLowerCase(); //выравниваем регистр
             if (genres == '' || genres == null) {
                 console.log('incorrect');
                 i--;
             } else {
                 personalMovieDB.genres = genres.split(', ');
-                personalMovieDB.genres.sort();
+                personalMovieDB.genres.sort(); // сначала большие буквы потом маленькие
             }
         }
 
